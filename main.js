@@ -55,8 +55,7 @@ async function teams(){
 
         await tab.waitForTimeout(2000) ;
         let el = await tab.$(".ts-calling-thread-header.acc-thread-focusable") ;
-        let ans =  el ? "Gaurav Join Button is Present" : "" ;
-        console.log(ans) ;
+        let ans =  el ? "Join Button is Present" : "" ;
 
         if(ans != "")
         {
@@ -70,7 +69,6 @@ async function teams(){
 async function jobs(){
 
     var job = new cron('30 9-17 * * *', function() {
-        console.log('You will see this message every second');
         teams() ;
     });
     job.start();
